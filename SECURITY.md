@@ -10,7 +10,7 @@
 
 **Please report privately**, using GitHub's private vulnerability reporting:
 
-- [Report a vulnerability](https://github.com/morsalin1342/adminer-docker/security/advisories/new)
+- [Report a vulnerability](https://github.com/sitespanel/adminer-docker/security/advisories/new)
 
 Please do not open a public issue for a security problem. Include a description, steps to
 reproduce and the image tag affected. We aim to respond within 48 hours.

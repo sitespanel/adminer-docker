@@ -24,7 +24,7 @@ LABEL org.opencontainers.image.title="Adminer" \
       org.opencontainers.image.description="Adminer database tool, the official image with Alpine security updates" \
       org.opencontainers.image.version="${ADMINER_VERSION}" \
       org.opencontainers.image.licenses="Apache-2.0 OR GPL-2.0-only" \
-      org.opencontainers.image.source="https://github.com/morsalin1342/adminer-docker" \
+      org.opencontainers.image.source="https://github.com/sitespanel/adminer-docker" \
       org.opencontainers.image.base.name="docker.io/library/adminer:${ADMINER_VERSION}-standalone"
 
 USER adminer
