@@ -1,5 +1,7 @@
 # Adminer Docker Image
 
+[![image](https://github.com/sitespanel/adminer-docker/actions/workflows/image.yml/badge.svg)](https://github.com/sitespanel/adminer-docker/actions/workflows/image.yml) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/sitespanel/adminer-docker/badge)](https://scorecard.dev/viewer/?uri=github.com/sitespanel/adminer-docker)
+
 > **SitesPanel image source.** Google Cloud Build builds this image and publishes it to the GitHub Container Registry as `ghcr.io/sitespanel/adminer`; see [CLOUDBUILD.md](CLOUDBUILD.md).
 
 
