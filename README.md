@@ -1,14 +1,14 @@
 # Adminer Docker Image
 
-> **SitesPanel image source.** SitesPanel builds this image with Google Cloud Build and serves it from Artifact Registry (`europe-docker.pkg.dev/PROJECT/sitespanel-images/adminer`); see [CLOUDBUILD.md](CLOUDBUILD.md). Replace `PROJECT` with SitesPanel's Google Cloud project.
+> **SitesPanel image source.** Google Cloud Build builds this image and publishes it to the GitHub Container Registry as `ghcr.io/sitespanel/adminer`; see [CLOUDBUILD.md](CLOUDBUILD.md).
 
 
 [Adminer](https://www.adminer.org/), the single-file database tool, as the official `adminer`
 image plus Alpine's security updates.
 
 ```bash
-docker pull europe-docker.pkg.dev/PROJECT/sitespanel-images/adminer:6.1.2
-docker run --rm -p 127.0.0.1:8080:8080 europe-docker.pkg.dev/PROJECT/sitespanel-images/adminer:6.1.2
+docker pull ghcr.io/sitespanel/adminer:6.1.2
+docker run --rm -p 127.0.0.1:8080:8080 ghcr.io/sitespanel/adminer:6.1.2
 ```
 
 ## What this is, and what it is not
@@ -40,5 +40,5 @@ The build files in this repository are MIT ([LICENSE](LICENSE)). Adminer is
 ## Publishing
 
 A push to `master` that changes the Dockerfile builds the image, pushes it to
-`europe-docker.pkg.dev/PROJECT/sitespanel-images/adminer` and `europe-docker.pkg.dev/PROJECT/sitespanel-images/adminer`, fails on a fixable critical vulnerability and
+`ghcr.io/sitespanel/adminer` and `ghcr.io/sitespanel/adminer`, fails on a fixable critical vulnerability and
 keeps an SBOM. See [SECURITY.md](SECURITY.md) for reporting a vulnerability.
