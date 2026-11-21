@@ -1,0 +1,46 @@
+# Adminer Docker Image
+
+[![image](https://github.com/sitespanel/adminer-docker/actions/workflows/image.yml/badge.svg)](https://github.com/sitespanel/adminer-docker/actions/workflows/image.yml) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/sitespanel/adminer-docker/badge)](https://scorecard.dev/viewer/?uri=github.com/sitespanel/adminer-docker)
+
+> **SitesPanel image source.** GitHub Actions builds this image and publishes it to the GitHub Container Registry as `ghcr.io/sitespanel/adminer`; see [BUILD.md](BUILD.md).
+
+
+[Adminer](https://www.adminer.org/), the single-file database tool, as the official `adminer`
+image plus Alpine's security updates.
+
+```bash
+docker pull ghcr.io/sitespanel/adminer:6.1.2
+docker run --rm -p 127.0.0.1:8080:8080 ghcr.io/sitespanel/adminer:6.1.2
+```
+
+## What this is, and what it is not
+
+The published image **is** the official `adminer:<version>-standalone` image, pinned by tag and
+digest in the [Dockerfile](Dockerfile), with one extra step: `apk upgrade`, so Alpine's fixes
+for the base packages are in the image without waiting for the next official release.
+
+- Adminer itself, PHP and the entrypoint are the official ones. Nothing is patched or rebuilt.
+- It runs as the unprivileged `adminer` user and listens on port 8080.
+- It does not sign anyone in or restrict who can reach it. Put it behind something that does,
+  and never publish port 8080 to the internet.
+
+It exists because the phpMyAdmin image ships a bundled copy of Twig with critical findings and
+no fixed release, and SitesPanel needs a database tool whose image passes its vulnerability scan.
+
+## Versions
+
+| Tag | Adminer | Base |
+|---|---|---|
+| `6.1.2`, `latest` | 6.1.2 | `adminer:6.1.2-standalone` |
+
+## Licence
+
+The build files in this repository are MIT ([LICENSE](LICENSE)). Adminer is
+"Apache License 2.0 or GPL 2.0" ([ADMINER-LICENSE](ADMINER-LICENSE), also in the image at
+`/licenses/adminer-LICENSE`).
+
+## Publishing
+
+A push to `master` that changes the Dockerfile builds the image, pushes it to
+`ghcr.io/sitespanel/adminer` and `ghcr.io/sitespanel/adminer`, fails on a fixable critical vulnerability and
+keeps an SBOM. See [SECURITY.md](SECURITY.md) for reporting a vulnerability.
