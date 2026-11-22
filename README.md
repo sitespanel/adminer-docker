@@ -9,8 +9,8 @@
 image plus Alpine's security updates.
 
 ```bash
-docker pull ghcr.io/sitespanel/adminer:6.1.2
-docker run --rm -p 127.0.0.1:8080:8080 ghcr.io/sitespanel/adminer:6.1.2
+docker pull ghcr.io/sitespanel/adminer:6.3.0
+docker run --rm -p 127.0.0.1:8080:8080 ghcr.io/sitespanel/adminer:6.3.0
 ```
 
 ## What this is, and what it is not
@@ -31,7 +31,7 @@ no fixed release, and SitesPanel needs a database tool whose image passes its vu
 
 | Tag | Adminer | Base |
 |---|---|---|
-| `6.1.2`, `latest` | 6.1.2 | `adminer:6.1.2-standalone` |
+| `6.3.0`, `latest` | 6.3.0 | `adminer:6.3.0-standalone` |
 
 ## Licence
 
@@ -42,5 +42,5 @@ The build files in this repository are MIT ([LICENSE](LICENSE)). Adminer is
 ## Publishing
 
 A push to `master` that changes the Dockerfile builds the image, pushes it to
-`ghcr.io/sitespanel/adminer` and `ghcr.io/sitespanel/adminer`, fails on a fixable critical vulnerability and
+`ghcr.io/sitespanel/adminer` and `ghcr.io/sitespanel/adminer`, fails on a fixable high or critical vulnerability and
 keeps an SBOM. See [SECURITY.md](SECURITY.md) for reporting a vulnerability.
