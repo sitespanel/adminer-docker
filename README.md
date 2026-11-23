@@ -41,6 +41,6 @@ The build files in this repository are MIT ([LICENSE](LICENSE)). Adminer is
 
 ## Publishing
 
-A push to `master` that changes the Dockerfile builds the image, pushes it to
+A push to `main` that changes the Dockerfile builds the image, pushes it to
 `ghcr.io/sitespanel/adminer` and `ghcr.io/sitespanel/adminer`, fails on a fixable high or critical vulnerability and
 keeps an SBOM. See [SECURITY.md](SECURITY.md) for reporting a vulnerability.
