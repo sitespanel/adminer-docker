@@ -1,0 +1,2 @@
+# ARG source (see .github/upstream-check.py)
+ADMINER_VERSION dockerhub:library/adminer::-standalone
